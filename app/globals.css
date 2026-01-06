@@ -38,6 +38,29 @@ body {
   }
 }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-text {
+  animation: fade-in 1.5s ease-out forwards;
+  opacity: 0;
+}
+
+.smokey-overlay {
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.03) 30%, transparent 60%);
+  filter: blur(1.5px);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
 .animate-reveal-sweep {
   animation: reveal-sweep 4s ease-in-out forwards;
 }
